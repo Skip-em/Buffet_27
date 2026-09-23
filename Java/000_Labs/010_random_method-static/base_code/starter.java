@@ -12,8 +12,8 @@ class starter {
 
 		int a = (int)(Math.random() * 10);
 		int a = (int)(Math.random() * 101);
-		double c = Math.random() * 1.5 + 2.5;
-		double c = Math.random() * 575 + 14;
+		double c = Math.random() * 1.6 + 2.5;
+		double c = Math.random() * 580 + 14;
 
 	}
 }
