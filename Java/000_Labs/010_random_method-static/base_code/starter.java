@@ -1,5 +1,5 @@
 /*
- *	Author:  
+ *	Author:  AJ Splichal
  *  Date: 
 */
 
@@ -11,9 +11,11 @@ class starter {
 		Scanner sc = new Scanner(System.in);
 
 		int a = (int)(Math.random() * 10);
-		int a = (int)(Math.random() * 101);
+		int b = (int)(Math.random() * 101);
 		double c = Math.random() * 1.6 + 2.5;
-		double c = Math.random() * 580 + 14;
+		double d = Math.random() * 576 + 14;
+
+		System.out.println(a + ", " + b + ", " + c + ", " + d);
 
 	}
 }
