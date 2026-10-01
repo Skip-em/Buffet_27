@@ -8,8 +8,22 @@ import java.util.Random;
 
 class starter {
 	public static void main(String args[]) {
-		// the string "I love to learn coding remotely." will appear in
-		// the command window when you compile and run this program.
-		System.out.print("I love to learn coding remotely."); 
+		Scanner sc = new Scanner(System.in);
+		
+		int num = (int)(Math.random()*1001);
+
+		System.out.print("guess a random num between 1-1000: "); 
+		int guess = sc.nextInt();
+
+		if(guess == num) {
+			System.out.println("u won!");
+		}
+		else if(num < guess){
+			System.out.println("the num is lower, try again");
+		}
+		else if(num > guess){
+			System.out.println("the num is higher, try again");
+		}
+	
 	}
 }
