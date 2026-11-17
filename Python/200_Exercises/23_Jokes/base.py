@@ -1,12 +1,24 @@
 import requests
 joke = requests.get("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single").json()
-#joke2Part = requests.get("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart").json()
-
-# Jokes with 1 part just have a joke
-# joke["joke"] -> References the String of the joke itself
+joke2Part = requests.get("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart").json()
 
 
-# Jokes with 2 parts have a set up and delivery
-# joke["setup"] -> References the String of the setup of the joke
-# joke["delivery"] -> References the String of the delivery part of the joke
+ans = input("Do you want a single or two part joke? (answer 1 or 2): ")
+num = int(input("how many jokes do you want?"))
+print("--------------------------------")
+
+for x in range(0,num):
+
+    joke = requests.get("https://v2.jokeapi.dev/joke/Any?explicit&type=single").json()
+    joke2Part = requests.get("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,explicit&type=twopart").json()
+
+    if ans == "1":
+        print(joke["joke"])
+        print("--------------------------------")
+    elif ans == "2":
+        print(joke2Part["setup"] + "  " + joke2Part["delivery"])
+        print("--------------------------------")
+    else:
+        print("did not understand")
+
 
